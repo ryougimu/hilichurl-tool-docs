@@ -1,0 +1,131 @@
+# MkDocs — 站点配置（与 PLAN 中 MkDocs Material 方案一致）
+site_name: Hilichurl's Edit Tool 使用说明
+site_description: 游戏 Mod 编辑器用户文档
+site_url: https://ryougimu.github.io/hilichurl-tool-docs/
+
+docs_dir: docs
+
+exclude_docs: |
+  README.md
+
+theme:
+  name: material
+  language: zh
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换深色
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换浅色
+  features:
+    - navigation.tracking
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      languages:
+        - locale: zh
+          default: true
+          name: 中文
+          build: true
+          site_name: Hilichurl's Edit Tool 使用说明
+          site_description: 游戏 Mod 编辑器用户文档
+          nav_translations:
+            首页: 首页
+            第一章 认识编辑器: 第一章 认识编辑器
+            第二章 快速开始: 第二章 快速开始
+            第三章 基础数据（Options）: 第三章 基础数据（Options）
+            第四章 Hero 编辑: 第四章 Hero 编辑
+            总览: 总览
+            基本信息: 基本信息
+            战斗配置: 战斗配置
+            资源: 资源
+            登场方式: 登场方式
+            事件编辑器: 事件编辑器
+            其他: 其他
+            第五章 导出与打包: 第五章 导出与打包
+            第六章 国际化: 第六章 国际化
+            第七章 配置参考: 第七章 配置参考
+            第八章 附录: 第八章 附录
+        - locale: en
+          name: English
+          build: true
+          site_name: "Hilichurl's Edit Tool User Guide"
+          site_description: "Game Mod Editor Documentation"
+          nav_translations:
+            首页: Home
+            第一章 认识编辑器: "Chapter 1: Meet the editor"
+            第二章 快速开始: "Chapter 2: Quick start"
+            第三章 基础数据（Options）: "Chapter 3: Where options come from"
+            第四章 Hero 编辑: "Chapter 4: Hero editing"
+            总览: Overview
+            基本信息: Basic Info
+            战斗配置: Battle Config
+            资源: Resources
+            登场方式: Team
+            事件编辑器: Event Editor
+            其他: Other
+            第五章 导出与打包: "Chapter 5: Export & packing"
+            第六章 国际化: "Chapter 6: Internationalization"
+            第七章 配置参考: "Chapter 7: Configuration reference"
+            第八章 附录: "Chapter 8: Appendix"
+        - locale: ja
+          name: 日本語
+          build: true
+          site_name: "Hilichurl's Edit Tool 利用ガイド"
+          site_description: "ゲーム Mod エディタ ドキュメント"
+          nav_translations:
+            首页: ホーム
+            第一章 认识编辑器: 第1章：エディタについて
+            第二章 快速开始: 第2章：クイックスタート
+            第三章 基础数据（Options）: 第3章：基礎データ（Options）
+            第四章 Hero 编辑: 第4章：ヒーロー編集
+            总览: 概要
+            基本信息: 基本情報
+            战斗配置: 戦闘設定
+            资源: リソース
+            登场方式: チーム設定
+            事件编辑器: イベントエディタ
+            其他: その他
+            第五章 导出与打包: 第5章：エクスポートとパック
+            第六章 国际化: 第6章：国際化
+            第七章 配置参考: 第7章：設定リファレンス
+            第八章 附录: 第8章：付録
+
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables
+
+nav:
+  - 首页: index.md
+  - 第一章 认识编辑器: 01_introduction.md
+  - 第二章 快速开始: 02_quick_start.md
+  - 第三章 基础数据（Options）: 03_options_source.md
+  - 第四章 Hero 编辑:
+      - 总览: 04_hero_editing.md
+      - 基本信息: 04_h1_basic_info.md
+      - 战斗配置: 04_h2_battle_config.md
+      - 资源: 04_h3_resource.md
+      - 登场方式: 04_h4_appearance.md
+      - 事件编辑器: 04_h5_event_editor.md
+      - 其他: 04_h6_other.md
+  - 第五章 导出与打包: 05_export.md
+  - 第六章 国际化: 06_i18n.md
+  - 第七章 配置参考: 07_config_reference.md
+  - 第八章 附录: 08_appendix.md
